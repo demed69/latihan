@@ -1,18 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333; /* Dark gray for text */
+  padding: 20px;
+  max-width: 900px; /* Constrain width for better readability */
+  margin: 0 auto; /* Center content block */
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #111; /* Darker color for main heading */
+  text-align: center; /* Keep main heading centered */
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+  color: #222;
+  border-bottom: 1px solid #eee; /* Subtle separator */
+  padding-bottom: 0.3em;
+}
+
+h3 {
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+  color: #444;
+}
+
+p, ul {
+  margin-bottom: 1em;
+}
+
+article {
+  margin-bottom: 1.5em;
+}
+
+ul {
+  padding-left: 20px; /* Standard indentation */
+}
+
+li {
+  margin-bottom: 0.5em;
 }
 
 img {
   max-width: 100%;
   height: auto;
+  display: block; /* Can help with spacing issues */
+  margin: 1em auto; /* Center images if they are standalone */
 }
 
+/* Responsive adjustments */
 @media (max-width: 600px) {
   body {
-    font-size: 14px; /* Example: smaller font on small screens */
+    font-size: 14px; /* Adjust base font size for smaller screens */
+    padding: 15px; /* Slightly less padding */
   }
   h1 {
-    font-size: 24px; /* Example: smaller main heading */
+    font-size: 2em; /* Adjust main heading size */
   }
-  /* Add other adjustments as needed, e.g., making sections stack vertically if they were side-by-side */
+  h2 {
+    font-size: 1.5em; /* Adjust section heading size */
+  }
+  h3 {
+    font-size: 1.15em; /* Adjust sub-heading size */
+  }
+}
+
+/* Interactive elements */
+a:hover {
+  color: #007bff; /* Primary accent color - Bootstrap blue, generally good */
+  text-decoration: underline;
+}
+
+section h2:hover {
+  color: #007bff; /* Use accent color on hover for section titles */
+  text-shadow: none; /* Remove previous shadow if any, or adjust as preferred */
+}
+
+/* Animations */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Slightly adjusted timing */
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
